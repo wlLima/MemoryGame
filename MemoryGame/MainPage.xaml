@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MemoryGame.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MemoryGame.Controls"
+    xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <Frame Padding="64" BackgroundColor="{StaticResource PrimaryColor}">
+            <Label
+                FontAttributes="Bold"
+                FontSize="24"
+                HorizontalTextAlignment="Center"
+                Text="Welcome to Memory Game!"
+                TextColor="#fff" />
+        </Frame>
+
+        <StackLayout Margin="30,20" VerticalOptions="FillAndExpand">
+
+            <Label HorizontalOptions="CenterAndExpand" Text="Informe o nome do usuário" />
+            <pancakeview:PancakeView
+                Padding="10,10"
+                BackgroundColor="#fff"
+                CornerRadius="15">
+                <pancakeview:PancakeView.Shadow>
+                    <pancakeview:DropShadow Offset="15,15" Color="#000" />
+                </pancakeview:PancakeView.Shadow>
+
+                <controls:PersonalizedEntry Text="{Binding User.Name}" TextColor="{StaticResource PrimaryColor}" />
+
+            </pancakeview:PancakeView>
+
+            <Button
+                Command="{Binding AvancarCommand}"
+                Text="Salvar"
+                VerticalOptions="EndAndExpand" />
+        </StackLayout>
+
+    </StackLayout>
+
+
+
+</ContentPage>

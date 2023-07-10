@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryGame.Android", "MemoryGame.Android\MemoryGame.Android.csproj", "{4D20C83B-01A9-4194-B25C-FC9FC97D21AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryGame", "MemoryGame\MemoryGame.csproj", "{EAF29540-AE34-48A3-A71D-F8E29A1A1A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D20C83B-01A9-4194-B25C-FC9FC97D21AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D20C83B-01A9-4194-B25C-FC9FC97D21AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D20C83B-01A9-4194-B25C-FC9FC97D21AF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4D20C83B-01A9-4194-B25C-FC9FC97D21AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D20C83B-01A9-4194-B25C-FC9FC97D21AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D20C83B-01A9-4194-B25C-FC9FC97D21AF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EAF29540-AE34-48A3-A71D-F8E29A1A1A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF29540-AE34-48A3-A71D-F8E29A1A1A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF29540-AE34-48A3-A71D-F8E29A1A1A22}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EAF29540-AE34-48A3-A71D-F8E29A1A1A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF29540-AE34-48A3-A71D-F8E29A1A1A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF29540-AE34-48A3-A71D-F8E29A1A1A22}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A4A60FE-1EE0-45D8-939A-CB71D92D4918}
+	EndGlobalSection
+EndGlobal

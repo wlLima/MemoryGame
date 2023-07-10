@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MemoryGame.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor" >#2B2D42</Color>
+            <Color x:Key="LightGray" >#8D99AE</Color>
+            <Color x:Key="FlashWhite" >#EDF2F4</Color>
+            <Color x:Key="Red" >#EF233C</Color>
+            <Color x:Key="Danger" >#D90429</Color>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource LightGray}"/>
+                <Setter Property="CornerRadius" Value="40" />
+                <Setter Property="TextColor" Value="#fff" />
+                <Setter Property="HeightRequest" Value="40" />
+            </Style>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

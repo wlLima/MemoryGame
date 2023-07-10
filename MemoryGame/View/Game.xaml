@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MemoryGame.View.Game"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pancakeview="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    Title="Memory Game">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="10,10" Orientation="Horizontal">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Nome: " />
+                                <Span Text="{Binding User.Name}" TextColor="{StaticResource Danger}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalOptions="EndAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Erros: " />
+                                <Span Text="{Binding User.Errors}" TextColor="{StaticResource Danger}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalOptions="EndAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Pontuação: " />
+                                <Span Text="{Binding User.Record}" TextColor="{StaticResource Danger}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <!--<Label Text="{Binding User.Name, StringFormat='Nome: {0}'}" TextColor="{StaticResource LightGray}" FontSize="16" />-->
+                <!--<Label Text="{Binding User.Record}" TextColor="{StaticResource LightGray}" FontSize="16" HorizontalOptions="EndAndExpand" />-->
+            </StackLayout>
+
+            <Grid
+                Margin="10,10"
+                ColumnDefinitions="*,*"
+                IsEnabled="{Binding WrapperDisplay}"
+                RowDefinitions="*,*,*"
+                VerticalOptions="FillAndExpand">
+
+                <pancakeview:PancakeView
+                    BackgroundColor="#fff"
+                    CornerRadius="15"
+                    IsEnabled="{Binding Card1.Enabled}">
+                    <pancakeview:PancakeView.Shadow>
+                        <pancakeview:DropShadow Offset="15,15" Color="#000" />
+                    </pancakeview:PancakeView.Shadow>
+                    <Label
+                        Padding="15"
+                        FontAttributes="Bold"
+                        FontSize="32"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="{Binding Card1.Visibility}"
+                        Text="{Binding Card1.Number}"
+                        TextColor="{StaticResource LightGray}"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <pancakeview:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Card1.Click}" />
+                    </pancakeview:PancakeView.GestureRecognizers>
+                </pancakeview:PancakeView>
+
+                <pancakeview:PancakeView
+                    Grid.Column="1"
+                    BackgroundColor="#fff"
+                    CornerRadius="15"
+                    IsEnabled="{Binding Card2.Enabled}">
+                    <pancakeview:PancakeView.Shadow>
+                        <pancakeview:DropShadow Offset="15,15" Color="#000" />
+                    </pancakeview:PancakeView.Shadow>
+                    <Label
+                        Padding="15"
+                        FontAttributes="Bold"
+                        FontSize="32"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="{Binding Card2.Visibility}"
+                        Text="{Binding Card2.Number}"
+                        TextColor="{StaticResource LightGray}"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <pancakeview:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Card2.Click}" />
+                    </pancakeview:PancakeView.GestureRecognizers>
+                </pancakeview:PancakeView>
+
+                <pancakeview:PancakeView
+                    Grid.Row="1"
+                    BackgroundColor="#fff"
+                    CornerRadius="15"
+                    IsEnabled="{Binding Card3.Enabled}">
+                    <pancakeview:PancakeView.Shadow>
+                        <pancakeview:DropShadow Offset="15,15" Color="#000" />
+                    </pancakeview:PancakeView.Shadow>
+                    <Label
+                        Padding="15"
+                        FontAttributes="Bold"
+                        FontSize="32"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="{Binding Card3.Visibility}"
+                        Text="{Binding Card3.Number}"
+                        TextColor="{StaticResource LightGray}"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <pancakeview:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Card3.Click}" />
+                    </pancakeview:PancakeView.GestureRecognizers>
+                </pancakeview:PancakeView>
+
+                <pancakeview:PancakeView
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="#fff"
+                    CornerRadius="15"
+                    IsEnabled="{Binding Card4.Enabled}">
+                    <pancakeview:PancakeView.Shadow>
+                        <pancakeview:DropShadow Offset="15,15" Color="#000" />
+                    </pancakeview:PancakeView.Shadow>
+                    <Label
+                        Padding="15"
+                        FontAttributes="Bold"
+                        FontSize="32"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="{Binding Card4.Visibility}"
+                        Text="{Binding Card4.Number}"
+                        TextColor="{StaticResource LightGray}"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <pancakeview:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Card4.Click}" />
+                    </pancakeview:PancakeView.GestureRecognizers>
+                </pancakeview:PancakeView>
+
+                <pancakeview:PancakeView
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    BackgroundColor="#fff"
+                    CornerRadius="15"
+                    IsEnabled="{Binding Card5.Enabled}">
+                    <pancakeview:PancakeView.Shadow>
+                        <pancakeview:DropShadow Offset="15,15" Color="#000" />
+                    </pancakeview:PancakeView.Shadow>
+                    <Label
+                        Padding="15"
+                        FontAttributes="Bold"
+                        FontSize="32"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="{Binding Card5.Visibility}"
+                        Text="{Binding Card5.Number}"
+                        TextColor="{StaticResource LightGray}"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <pancakeview:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Card5.Click}" />
+                    </pancakeview:PancakeView.GestureRecognizers>
+                </pancakeview:PancakeView>
+
+                <pancakeview:PancakeView
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    BackgroundColor="#fff"
+                    CornerRadius="15"
+                    IsEnabled="{Binding Card6.Enabled}">
+                    <pancakeview:PancakeView.Shadow>
+                        <pancakeview:DropShadow Offset="15,15" Color="#000" />
+                    </pancakeview:PancakeView.Shadow>
+                    <Label
+                        Padding="15"
+                        FontAttributes="Bold"
+                        FontSize="32"
+                        HorizontalOptions="CenterAndExpand"
+                        IsVisible="{Binding Card6.Visibility}"
+                        Text="{Binding Card6.Number}"
+                        TextColor="{StaticResource LightGray}"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <pancakeview:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Card6.Click}" />
+                    </pancakeview:PancakeView.GestureRecognizers>
+                </pancakeview:PancakeView>
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
