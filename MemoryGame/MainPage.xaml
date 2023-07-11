@@ -14,7 +14,7 @@
                 FontAttributes="Bold"
                 FontSize="24"
                 HorizontalTextAlignment="Center"
-                Text="Welcome to Memory Game!"
+                Text="Bem vindo ao Memory Game!"
                 TextColor="#fff" />
         </Frame>
 
